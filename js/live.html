@@ -9,7 +9,7 @@
 //            $('body').on('click','p',function () {
 //                $('p').hide();
 //            });
-            $('body').delegate('p','click',function () {
+            $(document).delegate('p','click',function () {//document不加引号，因为不是标记
                 $('p').hide();
             });
             $('button').click(function () {

@@ -5,11 +5,13 @@
     <title>Title</title>
     <script src="../jquery-3.2.1.min.js"></script>
     <script>
-        $('p').live('click',function () {
-           $(this).hide();
-        });
-        $('button').click(function () {
-           $('<p>new p...</p>').insertAfter('button');
+        $(function () {
+            $('p').delegate('p','click', function () {
+                $(this).hide();
+            });
+            $('button').click(function () {
+                $('<p>new p...</p>').insertAfter('button');
+            });
         });
     </script>
 </head>

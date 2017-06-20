@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script>
+        function checkForm() {
+            var name = document.getElementById('name');
+            console.log(name);
 
+            if (!/^[\u4e00-\u9fbb]{2,4}$/.test(name.value.trim())) {
+                alert('name is not exit');
+                name.focus();// 错误后光标会回到name框，获取焦点
+                return false;
+            }
+        }
     </script>
 </head>
 <body>
-<form action="" method="post">
-    <input type="text" name="name" placeholder="姓名"> *(中文)<br>
-    <input type="password" name="password" placeholder="密码"> *(>=6)<br>
-    <input type="text" name="age" placeholder="年龄"> *(number)<br>
-    <input type="text" name="email" placeholder="邮件"> *(合法邮件地址)<br>
-    <input type="text" name="dob" placeholder="出生日期"> *(yyyy-MM-dd)<br>
+<form action="http://jianshu.com" method="post" onsubmit="return checkForm()">
+    <input id="name" type="text" name="name" placeholder="姓名"> *(中文)<br>
+    <input id="password" type="password" name="password" placeholder="密码"> *(>=6)<br>
+    <input id="age" type="text" name="age" placeholder="年龄"> *(number)<br>
+    <input id="email" type="text" name="email" placeholder="邮件"> *(合法邮件地址)<br>
+    <input id="dob" type="text" name="dob" placeholder="出生日期"> *(yyyy-MM-dd)<br>
     <input type="submit" value="注册">
 </form>
 </body>

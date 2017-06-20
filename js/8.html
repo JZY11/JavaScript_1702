@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p{
+            background: red;
+        }
+    </style>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                $('p').fadeToggle(3000);
+            });
+        });
+    </script>
+</head>
+<body>
+<p>今天天气天气挺好的</p>
+<button>click</button>
+</body>
+</html>

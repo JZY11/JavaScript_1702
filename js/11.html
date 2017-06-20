@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        $('p').live('click',function () {
+           $(this).hide();
+        });
+        $('button').click(function () {
+           $('<p>new p...</p>').insertAfter('button');
+        });
+    </script>
+</head>
+<body>
+<button>add p</button>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        $(function () {
+            $('button').click(function () {
+               alert('background color = ' + $('p').css('background-color')) ;
+            });
+        });
+    </script>
+</head>
+<body>
+<h2>这是标题</h2>
+<p style="background-color: #ff0000">这是一个段落。</p>
+<p style="background-color: #00ff00">这是一个段落。</p>
+<p style="background-color: #0000ff">这是一个段落。</p>
+<button>返回p元素的背景色</button>
+</body>
+</html>
